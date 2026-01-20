@@ -189,6 +189,12 @@ prevButton.addEventListener('click', () => {
     updateCarousel();
 });
 
+// Initial call
+updateCarousel();
+
+// Update again on load to ensure images are loaded and widths are correct
+window.addEventListener('load', updateCarousel);
+
 // Window resize handling for carousel
 window.addEventListener('resize', updateCarousel);
 
