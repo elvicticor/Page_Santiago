@@ -1,0 +1,59 @@
+---
+const { title = "GLYTCH // AUDIO_VISUAL_EXPERIENCE" } = Astro.props;
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="SERGIO SANTIAGO - GLYTCH Experience"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div id="preloader" class="preloader">
+			<h1
+				class="glitch-text"
+				data-text="SERGIO_SANTIAGO"
+				style="font-size: 4rem;"
+			>
+				SERGIO_SANTIAGO
+			</h1>
+			<div
+				class="mono"
+				style="margin-top: 20px; color: var(--cyan); font-size: 0.8rem;"
+			>
+				INICIANDO_SISTEMA...
+			</div>
+		</div>
+
+		<div class="scanlines"></div>
+		<div class="noise"></div>
+
+		<slot />
+
+		<script>
+			// Preloader Logic
+			window.addEventListener("load", () => {
+				window.scrollTo(0, 0);
+				document.body.style.overflow = "hidden";
+
+				setTimeout(() => {
+					const preloader = document.getElementById("preloader");
+					if (preloader) {
+						preloader.classList.add("fade-out");
+						// Remove from DOM after transition to avoid z-index issues?
+						// CSS uses pointer-events: none, so it's fine.
+					}
+					document.body.style.overflow = "";
+				}, 2000); // Reduced to 2s for better UX, original was 3s
+			});
+		</script>
+	</body>
+</html>

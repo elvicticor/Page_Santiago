@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Identity from '../components/Identity.astro';
+import NewsFeed from '../components/NewsFeed.astro';
+import Discography from '../components/Discography.astro';
+import Tickets from '../components/Tickets.astro';
+import SocialFeed from '../components/SocialFeed.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import Footer from '../components/Footer.astro';
+
+// React Components
+import Navbar from '../components/Navbar';
+import Visualizer from '../components/Visualizer';
+import AudioArchive from '../components/AudioArchive';
+import Carousel from '../components/Carousel';
+import Comments from '../components/Comments';
+import Player from '../components/Player';
+---
+
+<Layout title="GLYTCH // AUDIO_VISUAL_EXPERIENCE">
+    <Navbar client:load />
+
+	<main>
+		<!-- HERO -->
+		<Hero />
+
+		<!-- VISUALIZER -->
+        <Visualizer client:load />
+
+		<!-- IDENTITY / SOBRE MÍ -->
+		<Identity />
+
+        <!-- NEWS -->
+        <NewsFeed />
+
+        <!-- CANCIONES -->
+        <Discography />
+
+        <!-- ARCHIVE -->
+        <AudioArchive client:load />
+
+        <!-- TICKETS -->
+        <Tickets />
+
+        <!-- GALLERY -->
+        <Carousel client:visible />
+
+        <!-- COMMENTS -->
+        <Comments client:visible />
+
+        <!-- SOCIAL -->
+        <SocialFeed />
+        <SocialLinks />
+
+        <Footer />
+	</main>
+
+    <Player client:load />
+</Layout>

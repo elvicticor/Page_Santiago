@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GLYTCH // AUDIO_VISUAL_EXPERIENCE</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div id="preloader" class="preloader">
+        <h1 class="glitch-text" data-text="SERGIO_SANTIAGO" style="font-size: 4rem;">SERGIO_SANTIAGO</h1>
+        <div class="mono" style="margin-top: 20px; color: var(--cyan); font-size: 0.8rem;">INICIANDO_SISTEMA...</div>
+    </div>
+
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+
+    <nav>
+        <div class="mono" style="font-weight: bold;">GLYTCH_//_AUDIO</div>
+        <div class="nav-links mono">
+            <a href="#identity" class="nav-link">Sobre_Mí</a>
+            <a href="#canciones" class="nav-link">Canciones</a>
+            <a href="#gallery" class="nav-link">Galería</a>
+            <a href="#tickets" class="nav-link">Tickets</a>
+            <a href="#comments" class="nav-link">Fans</a>
+        </div>
+        <div class="nav-controls" style="display: flex; gap: 15px; align-items: center;">
+            <button id="theme-toggle" class="mono"
+                style="background: transparent; border: 1px solid var(--fg); color: var(--fg); padding: 5px 10px; cursor: pointer;">
+                LIGHT_MODE
+            </button>
+            <button id="menu-toggle" class="mobile-only" aria-label="Menu"
+                style="background: transparent; border: none; color: var(--fg); cursor: pointer; display: none;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="square" />
+                    <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="square" />
+                    <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="square" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="mono" style="color: var(--cyan); display: block; margin-bottom: 10px;">///
+                        SYSTEM_READY</span>
+                    <h1 class="glitch-text" data-text="SERGIO_SANTIAGO">SERGIO_SANTIAGO</h1>
+                    <span class="subtitle mono">SOUND_AS_DISTORTION // V.2.0</span>
+                    <div style="margin-top: 30px;">
+                        <a href="#visualizer" class="mono"
+                            style="border-bottom: 1px solid var(--red); padding-bottom: 5px;">EXPLORE_AUDIO</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="album-art">
+                        <!-- Placeholder for art, using a gradient for now if image missing -->
+                        <img src="3.jpg" alt="SERGIO SANTIAGO Profile"
+                            style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; mix-blend-mode: luminosity;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISUALIZER -->
+        <section id="visualizer" class="visualizer-section">
+            <div class="container">
+                <h3 class="mono" style="text-align: center; margin-bottom: 40px; color: var(--muted);">///
+                    AUDIO_PROCESSOR</h3>
+                <div class="visualizer-container" id="visualizer-bars">
+                    <!-- Bars injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- IDENTITY / SOBRE MÍ -->
+        <section id="identity" class="identity container">
+            <h2 class="glitch-text" data-text="SOBRE_MÍ">SOBRE_MÍ</h2>
+            <p>
+                Sergio Santiago es un cantautor colombiano, nació en Barranquilla disfrutando de la cultura musical ya
+                que la mayoría de su familia vienen ejerciendo en este campo.
+                <br><br>
+                A muy temprana edad Sergio conoció la fama y eso lo llevo a involucrarse por los caminos del alcohol y
+                la droga, a la edad de 25 años conoce de Jesús y decide caminar con él, desde ese momento toma la de
+                decisión de usar su talento para exaltar a Dios.
+                Sergio Santiago se viene afianzando en la música góspel dentro de su género. En sus composiciones
+                encontramos melodías innatas que forma parte de su inspiración a la hora de componer. Sus canciones
+                están llenas de vivencias y experiencias, lo que permite que su música tenga una fuerza y se vea
+                reflejada en la gran aceptación por parte de emisoras seculares y cristianas.
+                <br><br>
+                En la actualidad Sergio sigue radicado en Barranquilla, está casado y disfruta de sus hijos. También
+                trabaja en varios temas que se lanzaran en el trascurso del año y dirige un reconocido Mariachi de la
+                ciudad.
+                <br><br>
+                <span class="mono" style="color: var(--cyan);">// MÚSICA_CRISTIANA // EXPERIMENTAL // ADORACIÓN</span>
+            </p>
+        </section>
+        <!-- NEWS FEED -->
+        <section id="news" class="container">
+            <div class="section-header">
+                <h3>/// NEWS_FEED</h3>
+                <span class="mono" style="color: var(--cyan);">LATEST_UPDATES</span>
+            </div>
+            <div class="news-grid">
+                <article class="news-item">
+                    <span class="news-date mono">2026.04.12</span>
+                    <h4 class="news-title">SYSTEM_OVERRIDE TOUR ANNOUNCED</h4>
+                    <p style="color: var(--muted); margin-bottom: 20px;">Global dates confirmed for the new audiovisual
+                        experience. Tickets available now.</p>
+                    <a href="#" class="mono" style="border-bottom: 1px solid var(--red);">READ_MORE</a>
+                </article>
+                <article class="news-item">
+                    <span class="news-date mono">2026.03.01</span>
+                    <h4 class="news-title">NEW EP "DIGITAL_DECAY" OUT NOW</h4>
+                    <p style="color: var(--muted); margin-bottom: 20px;">Listen to the new 4-track EP exploring the
+                        sounds of data corruption.</p>
+                    <a href="#" class="mono" style="border-bottom: 1px solid var(--red);">STREAM_NOW</a>
+                </article>
+                <article class="news-item">
+                    <span class="news-date mono">2026.02.15</span>
+                    <h4 class="news-title">COLLABORATION WITH AI_ENTITY</h4>
+                    <p style="color: var(--muted); margin-bottom: 20px;">Experimental track generated in real-time with
+                        neural networks.</p>
+                    <a href="#" class="mono" style="border-bottom: 1px solid var(--red);">ACCESS_LOG</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- CANCIONES (Formerly Discography) -->
+        <section id="canciones" class="container">
+            <div class="section-header">
+                <h3>/// CANCIONES</h3>
+                <span class="mono" style="color: var(--cyan);">ÚLTIMOS_LANZAMIENTOS</span>
+            </div>
+            <div class="disco-grid">
+                <div class="release-card">
+                    <div class="release-cover">
+                        <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=1000&auto=format&fit=crop"
+                            alt="Album Cover">
+                    </div>
+                    <div class="release-info">
+                        <h4 class="mono">TU_GRACIA</h4>
+                        <span style="color: var(--muted); font-size: 0.9rem;">SENCILLO // 2025</span>
+                    </div>
+                </div>
+                <div class="release-card">
+                    <div class="release-cover">
+                        <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?q=80&w=1000&auto=format&fit=crop"
+                            alt="Album Cover">
+                    </div>
+                    <div class="release-info">
+                        <h4 class="mono">LUZ_EN_CRISTAL</h4>
+                        <span style="color: var(--muted); font-size: 0.9rem;">EP // 2024</span>
+                    </div>
+                </div>
+                <div class="release-card">
+                    <div class="release-cover">
+                        <img src="https://images.unsplash.com/photo-1504333638930-c8787321eee0?q=80&w=1000&auto=format&fit=crop"
+                            alt="Album Cover">
+                    </div>
+                    <div class="release-info">
+                        <h4 class="mono">RESURRECCIÓN</h4>
+                        <span style="color: var(--muted); font-size: 0.9rem;">SENCILLO // 2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PLAYLIST / AUDIO ARCHIVE -->
+        <section id="archive" class="container">
+            <div class="section-header">
+                <h3>/// AUDIO_ARCHIVE</h3>
+                <span class="mono" style="color: var(--cyan);">SELECT_TRACK</span>
+            </div>
+            <div class="table-wrapper" style="overflow-x: auto;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">#</th>
+                            <th>TRACK_NAME</th>
+                            <th>ARTIST</th>
+                            <th style="text-align: right;">DURATION</th>
+                        </tr>
+                    </thead>
+                    <tbody id="playlist-body">
+                        <tr class="track-row" data-src="NEON_PULSE.wav" data-title="NEON_PULSE"
+                            data-artist="GLYTCH_MODE">
+                            <td class="mono" style="color: var(--muted);">01</td>
+                            <td>NEON_PULSE</td>
+                            <td class="mono" style="color: var(--muted);">SERGIO_SANTIAGO</td>
+                            <td class="mono" style="text-align: right;">03:45</td>
+                        </tr>
+                        <tr class="track-row" data-src="SYSTEM_FAILURE.wav" data-title="SYSTEM_FAILURE"
+                            data-artist="GLYTCH_MODE">
+                            <td class="mono" style="color: var(--muted);">02</td>
+                            <td>SYSTEM_FAILURE</td>
+                            <td class="mono" style="color: var(--muted);">SERGIO_SANTIAGO</td>
+                            <td class="mono" style="text-align: right;">04:12</td>
+                        </tr>
+                        <tr class="track-row" data-src="CYBER_DREAM.wav" data-title="CYBER_DREAM"
+                            data-artist="GLYTCH_MODE">
+                            <td class="mono" style="color: var(--muted);">03</td>
+                            <td>CYBER_DREAM</td>
+                            <td class="mono" style="color: var(--muted);">SERGIO_SANTIAGO</td>
+                            <td class="mono" style="text-align: right;">02:58</td>
+                        </tr>
+                        <tr class="track-row" data-src="DATA_CORRUPTION.wav" data-title="DATA_CORRUPTION"
+                            data-artist="GLYTCH_MODE">
+                            <td class="mono" style="color: var(--muted);">04</td>
+                            <td>DATA_CORRUPTION</td>
+                            <td class="mono" style="color: var(--muted);">SERGIO_SANTIAGO</td>
+                            <td class="mono" style="text-align: right;">05:01</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TICKETS -->
+        <section id="tickets" class="container">
+            <div class="section-header">
+                <h3>/// TICKETS</h3>
+                <span class="mono" style="color: var(--cyan);">PRÓXIMOS_EVENTOS</span>
+            </div>
+            <div class="table-wrapper" style="overflow-x: auto;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>FECHA</th>
+                            <th>CIUDAD</th>
+                            <th>LUGAR</th>
+                            <th style="text-align: right;">ESTADO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mono">2026.06.15</td>
+                            <td>BOGOTÁ, CO</td>
+                            <td class="mono" style="color: var(--muted);">AUDITORIO_G12</td>
+                            <td style="text-align: right;"><span
+                                    class="status-badge status-soldout mono">SOLD_OUT</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mono">2026.06.22</td>
+                            <td>MEDELLÍN, CO</td>
+                            <td class="mono" style="color: var(--muted);">LA_MACARENA</td>
+                            <td style="text-align: right;"><span
+                                    class="status-badge status-available mono">TICKETS</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mono">2026.06.29</td>
+                            <td>LIMA, PE</td>
+                            <td class="mono" style="color: var(--muted);">ESTADIO_NACIONAL</td>
+                            <td style="text-align: right;"><span
+                                    class="status-badge status-available mono">TICKETS</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- GALLERY / CAROUSEL -->
+        <section id="gallery" class="container">
+            <div class="section-header">
+                <h3>/// GALERÍA</h3>
+                <span class="mono" style="color: var(--cyan);">VISUAL_DATA</span>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" id="carousel-prev">&lt;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="carousel-track">
+                        <li class="carousel-slide current-slide">
+                            <img src="1.jpg" alt="Gallery Image 1">
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="2.jpg" alt="Gallery Image 2">
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="4.jpg" alt="Gallery Image 3">
+                        </li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next" id="carousel-next">&gt;</button>
+            </div>
+        </section>
+
+        <!-- COMMENTS / FAN ZONE -->
+        <section id="comments" class="container">
+            <div class="section-header">
+                <h3>/// FAN_ZONE</h3>
+                <span class="mono" style="color: var(--cyan);">TRANSMISIÓN_DE_DATOS</span>
+            </div>
+            <div class="comments-grid">
+                <div class="comment-form-container">
+                    <h4 class="mono" style="margin-bottom: 20px;">DEJAR_MENSAJE:</h4>
+                    <form id="comment-form">
+                        <input type="text" id="comment-name" placeholder="NOMBRE // ALIAS" required>
+                        <textarea id="comment-msg" placeholder="MENSAJE..." required></textarea>
+                        <button type="submit" class="mono btn-submit">ENVIAR_DATOS</button>
+                    </form>
+                </div>
+                <div class="comments-display">
+                    <h4 class="mono" style="margin-bottom: 20px;">LOG_DE_COMUNICACIÓN:</h4>
+                    <div id="comments-list">
+                        <!-- Comments injected via JS -->
+                        <div class="comment-item">
+                            <span class="comment-user mono">USER_001</span>
+                            <span class="comment-time mono">Hace 2 horas</span>
+                            <p class="comment-text">¡Increíble música! Dios te bendiga.</p>
+                        </div>
+                        <div class="comment-item">
+                            <span class="comment-user mono">NEON_PILGRIM</span>
+                            <span class="comment-time mono">Hace 5 horas</span>
+                            <p class="comment-text">Esperando el concierto en Bogotá. #GLYTCH</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL FEED / INSTAGRAM MOCKUP -->
+        <section id="social-feed" class="container" style="border-bottom: none;">
+            <div class="section-header">
+                <h3>/// SOCIAL_FEED</h3>
+                <span class="mono" style="color: var(--cyan);">IMÁGENES_RECIENTES</span>
+            </div>
+            <div class="social-feed-grid">
+                <div class="feed-item">
+                    <img src="https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=500&auto=format&fit=crop"
+                        alt="Feed 1">
+                    <div class="feed-overlay"><span class="mono">❤️ LIKED</span></div>
+                </div>
+                <div class="feed-item">
+                    <img src="https://images.unsplash.com/photo-1514525253440-b393452e8d26?q=80&w=500&auto=format&fit=crop"
+                        alt="Feed 2">
+                    <div class="feed-overlay"><span class="mono">❤️ LIKED</span></div>
+                </div>
+                <div class="feed-item">
+                    <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=500&auto=format&fit=crop"
+                        alt="Feed 3">
+                    <div class="feed-overlay"><span class="mono">❤️ LIKED</span></div>
+                </div>
+                <div class="feed-item">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=500&auto=format&fit=crop"
+                        alt="Feed 4">
+                    <div class="feed-overlay"><span class="mono">❤️ LIKED</span></div>
+                </div>
+            </div>
+        </section>
+        <section id="social" class="container" style="border-bottom: none;">
+            <div class="section-header">
+                <h3>/// REDES</h3>
+                <span class="mono" style="color: var(--cyan);">CONECTAR</span>
+            </div>
+            <div class="social-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+                <a href="#" class="social-box"
+                    style="border: 1px solid var(--fg); padding: 40px; transition: all 0.3s;">
+                    <h4 class="mono">INSTAGRAM</h4>
+                </a>
+                <a href="#" class="social-box"
+                    style="border: 1px solid var(--fg); padding: 40px; transition: all 0.3s;">
+                    <h4 class="mono">YOUTUBE</h4>
+                </a>
+                <a href="#" class="social-box"
+                    style="border: 1px solid var(--fg); padding: 40px; transition: all 0.3s;">
+                    <h4 class="mono">SPOTIFY</h4>
+                </a>
+                <a href="#" class="social-box"
+                    style="border: 1px solid var(--fg); padding: 40px; transition: all 0.3s;">
+                    <h4 class="mono">FACEBOOK</h4>
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="socials">
+                <a href="#" class="social-link mono">INSTAGRAM</a>
+                <a href="#" class="social-link mono">SPOTIFY</a>
+                <a href="#" class="social-link mono">YOUTUBE</a>
+            </div>
+            <p class="mono" style="color: var(--muted); font-size: 0.8rem;">
+                © 2026 GLYTCH_MODE // ALL_RIGHTS_RESERVED <br>
+                DESIGNED_BY_AI
+            </p>
+        </footer>
+    </main>
+
+    <!-- PLAYER -->
+    <div class="player">
+        <div class="track-info">
+            <span class="track-title">NEON_PULSE.wav</span>
+            <span class="track-artist mono">UNKNOWN_ARTIST</span>
+        </div>
+        <div class="controls">
+            <button class="btn-play" id="play-btn">
+                <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1V17L13 9L1 1Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+        <div class="mono" style="font-size: 0.8rem;">00:00 / 03:45</div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
