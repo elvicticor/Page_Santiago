@@ -36,7 +36,7 @@ const ThemeToggle = () => {
                 cursor: 'pointer'
             }}
         >
-            {theme === 'dark' ? 'LIGHT_MODE' : 'DARK_MODE'}
+            {theme === 'dark' ? 'MODO_CLARO' : 'MODO_OSCURO'}
         </button>
     );
 };

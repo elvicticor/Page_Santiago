@@ -1,5 +1,5 @@
 ---
-const { title = "GLYTCH // AUDIO_VISUAL_EXPERIENCE" } = Astro.props;
+const { title = "PRAISE MUSIC AWARDS // La Gala de la Música Cristiana" } = Astro.props;
 import "../styles/global.css";
 ---
 
@@ -9,37 +9,39 @@ import "../styles/global.css";
 		<meta charset="UTF-8" />
 		<meta
 			name="description"
-			content="SERGIO SANTIAGO - GLYTCH Experience"
+			content="Praise Music Awards — la premiación que celebra lo mejor de la música, las noticias y los autores cristianos. Vota por tus favoritos y vive la gala en vivo."
 		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
 		<div id="preloader" class="preloader">
+			<span class="crest mono">✦ PMA ✦</span>
 			<h1
-				class="glitch-text"
-				data-text="SERGIO_SANTIAGO"
-				style="font-size: 4rem;"
+				class="gold-text"
+				style="font-size: clamp(2rem, 6vw, 3.6rem); text-align:center;"
 			>
-				SERGIO_SANTIAGO
+				PRAISE MUSIC AWARDS
 			</h1>
 			<div
 				class="mono"
-				style="margin-top: 20px; color: var(--cyan); font-size: 0.8rem;"
+				style="margin-top: 16px; color: var(--muted); letter-spacing: 0.2em;"
 			>
-				INICIANDO_SISTEMA...
+				Preparando la gala...
 			</div>
 		</div>
-
-		<div class="scanlines"></div>
-		<div class="noise"></div>
 
 		<slot />
 
 		<script>
-			// Preloader Logic
 			window.addEventListener("load", () => {
 				window.scrollTo(0, 0);
 				document.body.style.overflow = "hidden";
@@ -48,12 +50,11 @@ import "../styles/global.css";
 					const preloader = document.getElementById("preloader");
 					if (preloader) {
 						preloader.classList.add("fade-out");
-						// Remove from DOM after transition to avoid z-index issues?
-						// CSS uses pointer-events: none, so it's fine.
 					}
 					document.body.style.overflow = "";
-				}, 2000); // Reduced to 2s for better UX, original was 3s
+				}, 1600);
 			});
 		</script>
+		<script src="../scripts/reveal.ts"></script>
 	</body>
 </html>

@@ -1,0 +1,54 @@
+---
+const posts = [
+    {
+        tag: "DESTACADO",
+        title: "Cómo la música cristiana está conquistando las listas globales",
+        excerpt: "Un análisis de cómo el género góspel y de adoración ha crecido en plataformas digitales durante el último año, y qué significa para los artistas independientes.",
+        img: "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=1200&auto=format&fit=crop",
+        meta: "Redacción PMA — 8 min de lectura",
+        featured: true,
+    },
+    {
+        tag: "NUEVO",
+        title: "5 libros cristianos que debes leer antes de la gala",
+        excerpt: "Una guía rápida por los títulos nominados en la categoría de literatura de este año.",
+        img: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1000&auto=format&fit=crop",
+        meta: "Redacción PMA — 4 min de lectura",
+    },
+    {
+        tag: "ENTREVISTA",
+        title: "Hablamos con los nominados a Canción del Año",
+        excerpt: "Los artistas finalistas nos cuentan el proceso creativo detrás de sus canciones.",
+        img: "https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=1000&auto=format&fit=crop",
+        meta: "Redacción PMA — 6 min de lectura",
+    },
+    {
+        tag: "COMUNIDAD",
+        title: "Así puedes seguir la gala desde tu iglesia o grupo pequeño",
+        excerpt: "Ideas para organizar una transmisión en comunidad el día de la ceremonia.",
+        img: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=1000&auto=format&fit=crop",
+        meta: "Redacción PMA — 3 min de lectura",
+    },
+];
+---
+<section id="blog" class="container">
+    <div class="section-header reveal">
+        <h3>Blog</h3>
+        <span class="mono section-eyebrow">HISTORIAS_Y_ANÁLISIS</span>
+    </div>
+    <div class="blog-grid">
+        {posts.map((post) => (
+            <article class={`blog-card reveal ${post.featured ? 'featured' : ''}`}>
+                <div class="blog-thumb">
+                    <img src={post.img} alt={post.title} />
+                </div>
+                <div class="blog-body">
+                    <span class="blog-tag mono">{post.tag}</span>
+                    <h4>{post.title}</h4>
+                    <p>{post.excerpt}</p>
+                    <span class="blog-meta mono">{post.meta}</span>
+                </div>
+            </article>
+        ))}
+    </div>
+</section>

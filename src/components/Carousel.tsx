@@ -1,7 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+
+const images = [
+    'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1200&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=1200&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1508973379184-7517410fb0bc?q=80&w=1200&auto=format&fit=crop',
+];
 
 const Carousel = () => {
-    const images = ['/1.jpg', '/2.jpg', '/4.jpg']; // Assuming these are in public/
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const nextSlide = () => {
@@ -12,29 +17,24 @@ const Carousel = () => {
         setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
     };
 
-    // Auto resize handling not strictly needed with React state re-render, 
-    // but CSS transform needs % or px. The original used px and getBoundingClientRect.
-    // CSS-only implementation or simple % transform is better.
-    // Let's use simple style transform with %.
-
     return (
         <section id="gallery" className="container">
-            <div className="section-header">
-                <h3>/// GALERÍA</h3>
-                <span className="mono" style={{ color: 'var(--cyan)' }}>VISUAL_DATA</span>
+            <div className="section-header reveal">
+                <h3>Galería</h3>
+                <span className="mono section-eyebrow">EDICIONES_ANTERIORES</span>
             </div>
-            <div className="carousel-container">
-                <button className="carousel-btn prev" onClick={prevSlide}>&lt;</button>
+            <div className="carousel-container reveal">
+                <button className="carousel-btn prev" onClick={prevSlide} aria-label="Anterior">&lt;</button>
                 <div className="carousel-track-container">
-                    <ul className="carousel-track" style={{ transform: `translateX(-${currentIndex * 100}%)`, transition: 'transform 0.5s ease-in-out' }}>
+                    <ul className="carousel-track" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                         {images.map((img, index) => (
                             <li className={`carousel-slide ${index === currentIndex ? 'current-slide' : ''}`} key={index}>
-                                <img src={img} alt={`Gallery Image ${index + 1}`} />
+                                <img src={img} alt={`Momento de la gala ${index + 1}`} />
                             </li>
                         ))}
                     </ul>
                 </div>
-                <button className="carousel-btn next" onClick={nextSlide}>&gt;</button>
+                <button className="carousel-btn next" onClick={nextSlide} aria-label="Siguiente">&gt;</button>
             </div>
         </section>
     );

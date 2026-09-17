@@ -1,0 +1,31 @@
+---
+const notes = [
+    {
+        quote: "La música cristiana no compite por fama, compite por dejar huella en quien la escucha.",
+        author: "Nota editorial // 02.2026",
+    },
+    {
+        quote: "Cada libro nominado este año nos recuerda que las palabras también pueden ser un ministerio.",
+        author: "Nota editorial // 02.2026",
+    },
+    {
+        quote: "Votar no es solo elegir un favorito, es reconocer el trabajo detrás de cada obra.",
+        author: "Nota editorial // 03.2026",
+    },
+];
+---
+<section id="notas" class="container" style="border-bottom: none;">
+    <div class="section-header reveal">
+        <h3>Notas</h3>
+        <span class="mono section-eyebrow">REFLEXIONES_BREVES</span>
+    </div>
+    <div class="notes-grid">
+        {notes.map((note) => (
+            <div class="note-card reveal">
+                <span class="note-quote-mark">"</span>
+                <p>{note.quote}</p>
+                <span class="note-author mono">{note.author}</span>
+            </div>
+        ))}
+    </div>
+</section>

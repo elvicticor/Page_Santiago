@@ -1,53 +1,68 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
-import Identity from '../components/Identity.astro';
+import About from '../components/About.astro';
+import LiveStream from '../components/LiveStream.astro';
+import VoteCTA from '../components/VoteCTA.astro';
+import Nominees from '../components/Nominees.astro';
+import Books from '../components/Books.astro';
 import NewsFeed from '../components/NewsFeed.astro';
-import Discography from '../components/Discography.astro';
-import Tickets from '../components/Tickets.astro';
+import Blog from '../components/Blog.astro';
+import Notes from '../components/Notes.astro';
+import EventDates from '../components/EventDates.astro';
 import SocialFeed from '../components/SocialFeed.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 import Footer from '../components/Footer.astro';
 
 // React Components
 import Navbar from '../components/Navbar';
-import Visualizer from '../components/Visualizer';
-import AudioArchive from '../components/AudioArchive';
+import Countdown from '../components/Countdown';
 import Carousel from '../components/Carousel';
-import Comments from '../components/Comments';
-import Player from '../components/Player';
+import Testimonials from '../components/Testimonials';
 ---
 
-<Layout title="GLYTCH // AUDIO_VISUAL_EXPERIENCE">
+<Layout title="PRAISE MUSIC AWARDS // La Gala de la Música Cristiana">
     <Navbar client:load />
 
 	<main>
 		<!-- HERO -->
 		<Hero />
 
-		<!-- VISUALIZER -->
-        <Visualizer client:load />
+        <!-- CUENTA REGRESIVA -->
+        <Countdown client:load />
 
-		<!-- IDENTITY / SOBRE MÍ -->
-		<Identity />
+		<!-- SOBRE EL PREMIO -->
+		<About />
 
-        <!-- NEWS -->
+        <!-- EN VIVO -->
+        <LiveStream />
+
+        <!-- VOTAR -->
+        <VoteCTA />
+
+        <!-- MÚSICA / NOMINADOS -->
+        <Nominees />
+
+        <!-- LIBROS -->
+        <Books />
+
+        <!-- NOTICIAS -->
         <NewsFeed />
 
-        <!-- CANCIONES -->
-        <Discography />
+        <!-- BLOG -->
+        <Blog />
 
-        <!-- ARCHIVE -->
-        <AudioArchive client:load />
+        <!-- NOTAS -->
+        <Notes />
 
-        <!-- TICKETS -->
-        <Tickets />
+        <!-- FECHAS Y SEDES -->
+        <EventDates />
 
-        <!-- GALLERY -->
+        <!-- GALERÍA -->
         <Carousel client:visible />
 
-        <!-- COMMENTS -->
-        <Comments client:visible />
+        <!-- TESTIMONIOS -->
+        <Testimonials client:visible />
 
         <!-- SOCIAL -->
         <SocialFeed />
@@ -55,6 +70,4 @@ import Player from '../components/Player';
 
         <Footer />
 	</main>
-
-    <Player client:load />
 </Layout>

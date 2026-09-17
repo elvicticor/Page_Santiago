@@ -1,0 +1,42 @@
+---
+const books = [
+    { title: "El Fuego de la Fe", author: "Marcos Rivera", category: "Crecimiento espiritual", status: "NOMINADO" },
+    { title: "Cartas a Mi Iglesia", author: "Daniela Osorio", category: "No ficción", status: "NOMINADO" },
+    { title: "Voces del Desierto", author: "Ismael Cortés", category: "Poesía", status: "NOMINADO" },
+    { title: "Un Nuevo Amanecer", author: "Lucía Fernández", category: "Testimonio", status: "GANADOR_2025" },
+];
+---
+<section id="libros" class="container">
+    <div class="section-header reveal">
+        <h3>Libros nominados</h3>
+        <span class="mono section-eyebrow">LITERATURA_CRISTIANA</span>
+    </div>
+    <div class="table-wrapper reveal" style="overflow-x: auto;">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th style="width: 50px;">#</th>
+                    <th>TÍTULO</th>
+                    <th>AUTOR</th>
+                    <th>CATEGORÍA</th>
+                    <th style="text-align: right;">ESTADO</th>
+                </tr>
+            </thead>
+            <tbody>
+                {books.map((book, i) => (
+                    <tr>
+                        <td class="mono" style="color: var(--muted);">{String(i + 1).padStart(2, '0')}</td>
+                        <td>{book.title}</td>
+                        <td style="color: var(--muted);">{book.author}</td>
+                        <td class="mono" style="color: var(--muted); font-size: 0.85rem;">{book.category}</td>
+                        <td style="text-align: right;">
+                            <span class={`status-badge mono ${book.status === 'GANADOR_2025' ? 'status-available' : 'status-nominado'}`}>
+                                {book.status.replace('_', ' ')}
+                            </span>
+                        </td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    </div>
+</section>

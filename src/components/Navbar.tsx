@@ -8,15 +8,20 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
+    const close = () => setIsOpen(false);
+
     return (
         <nav>
-            <div className="mono" style={{ fontWeight: 'bold' }}>GLYTCH_//_AUDIO</div>
+            <a href="#hero" className="mono" style={{ fontWeight: 700, letterSpacing: '0.08em' }} onClick={close}>
+                ✦ PRAISE MUSIC AWARDS
+            </a>
             <div className={`nav-links mono ${isOpen ? 'active' : ''}`}>
-                <a href="#identity" className="nav-link" onClick={() => setIsOpen(false)}>Sobre_Mí</a>
-                <a href="#canciones" className="nav-link" onClick={() => setIsOpen(false)}>Canciones</a>
-                <a href="#gallery" className="nav-link" onClick={() => setIsOpen(false)}>Galería</a>
-                <a href="#tickets" className="nav-link" onClick={() => setIsOpen(false)}>Tickets</a>
-                <a href="#comments" className="nav-link" onClick={() => setIsOpen(false)}>Fans</a>
+                <a href="#about" className="nav-link" onClick={close}>Sobre el Premio</a>
+                <a href="#live" className="nav-link" onClick={close}>En Vivo</a>
+                <a href="#nominados" className="nav-link" onClick={close}>Música</a>
+                <a href="#blog" className="nav-link" onClick={close}>Blog</a>
+                <a href="#libros" className="nav-link" onClick={close}>Libros</a>
+                <a href="#vote" className="nav-link cta" onClick={close}>Votar</a>
             </div>
             <div className="nav-controls" style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
                 <ThemeToggle />
