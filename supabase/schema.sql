@@ -16,6 +16,7 @@ alter table public.votes enable row level security;
 -- Migración desde la primera versión, que identificaba el navegador con ballot_id.
 alter table public.votes alter column ballot_id drop not null;
 alter table public.votes add column if not exists user_id uuid references auth.users(id) on delete cascade;
+alter table public.votes add column if not exists is_demo boolean not null default false;
 create index if not exists votes_user_id_idx on public.votes(user_id);
 create unique index if not exists votes_user_category_unique
 on public.votes(user_id, category)
