@@ -1,26 +1,15 @@
 ---
+const voteUrl = `${import.meta.env.BASE_URL}votar/`;
 ---
 
-<section id="vote" class="vote-section container">
-    <div class="vote-panel reveal">
-        <span class="mono section-eyebrow">✦ VOTACIÓN ABIERTA</span>
-        <h2 style="margin-top: 16px;">Tu voto elige a los ganadores</h2>
-        <p>
-            Cada categoría será decidida por el público. Elige tu canción, artista,
-            libro y noticia favorita del año y ayúdanos a coronar a los ganadores de
-            esta edición de Praise Music Awards.
-        </p>
-        <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-gold"
-        >
-            Votar en Google Forms
-        </a>
-        <div class="vote-note mono">
-            <!-- TODO: reemplazar el href="#" por el enlace real del formulario de Google una vez esté creado -->
-            Enlace de votación próximamente activo // 1 voto por categoría // cierra el 20.11.2026
+<section id="vote" class="vote-section">
+    <div class="container">
+        <div class="vote-panel reveal">
+            <span class="mono section-eyebrow">✦ VOTACIÓN ABIERTA</span>
+            <h2>Tu voto elige a los ganadores</h2>
+            <p>Participa en las 20 categorías y consulta cómo avanza la votación del público.</p>
+            <a href={voteUrl} target="_blank" rel="noopener noreferrer" class="btn btn-gold">Abrir formulario de votación ↗</a>
+            <div class="vote-note mono">1 voto por categoría // cierra el 20.11.2026</div>
         </div>
     </div>
 </section>

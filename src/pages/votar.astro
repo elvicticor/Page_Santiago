@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AuthVoting from '../components/AuthVoting';
+const homeUrl = import.meta.env.BASE_URL;
+---
+
+<Layout title="Votación 2026 // Praise Music Awards">
+    <header class="ballot-page-header">
+        <a href={homeUrl} class="mono">← Volver al sitio</a>
+        <span class="mono">✦ Praise Music Awards</span>
+    </header>
+    <main class="ballot-page">
+        <div class="container">
+            <div class="ballot-page-intro reveal">
+                <span class="mono section-eyebrow">Votación oficial 2026</span>
+                <h1>Tu voz decide.</h1>
+                <p>Crea una cuenta o inicia sesión y selecciona un nominado por categoría. Cada usuario puede completar la votación una sola vez.</p>
+            </div>
+            <div class="reveal"><AuthVoting client:load /></div>
+        </div>
+    </main>
+</Layout>

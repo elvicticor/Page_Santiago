@@ -18,6 +18,7 @@ import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar';
 import Countdown from '../components/Countdown';
 import Carousel from '../components/Carousel';
+import Community from '../components/Community';
 import Testimonials from '../components/Testimonials';
 ---
 
@@ -60,6 +61,9 @@ import Testimonials from '../components/Testimonials';
 
         <!-- GALERÍA -->
         <Carousel client:visible />
+
+        <!-- FOTOS DE LA COMUNIDAD -->
+        <Community client:visible />
 
         <!-- TESTIMONIOS -->
         <Testimonials client:visible />

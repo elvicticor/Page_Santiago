@@ -14,20 +14,25 @@ function getRemaining() {
 const pad = (n: number) => n.toString().padStart(2, '0');
 
 const Countdown = () => {
-    const [time, setTime] = useState(getRemaining());
+    // Arranca en null (no en getRemaining()): el HTML estático se genera una vez
+    // en el build, así que calcular la cuenta regresiva ahí desincroniza el
+    // primer render del cliente (que ocurre horas/días después) y React tira
+    // un error de hidratación. Se calcula el valor real ya en el navegador.
+    const [time, setTime] = useState<ReturnType<typeof getRemaining> | null>(null);
     const reducedMotion = useRef(false);
 
     useEffect(() => {
         reducedMotion.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        setTime(getRemaining());
         const interval = setInterval(() => setTime(getRemaining()), 1000);
         return () => clearInterval(interval);
     }, []);
 
     const units: [string, number][] = [
-        ['Días', time.days],
-        ['Horas', time.hours],
-        ['Minutos', time.minutes],
-        ['Segundos', time.seconds],
+        ['Días', time?.days ?? 0],
+        ['Horas', time?.hours ?? 0],
+        ['Minutos', time?.minutes ?? 0],
+        ['Segundos', time?.seconds ?? 0],
     ];
 
     return (
